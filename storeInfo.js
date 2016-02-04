@@ -6,6 +6,17 @@ function storeData(){
 
 }
 
+function clearForm(){
+	document.getElementById('destination').value = '';
+	document.getElementById('start-time').value = '';
+	document.getElementById('buffer-minutes').value = '';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('store').addEventListener('click', storeData);
+    document.getElementById('store').addEventListener('click', function() {
+    	storeData();
+    	clearForm();
+    	// add message
+    	document.getElementById('test').innerHTML = '<p><strong>Thanks! Please wait while we calculate your expected drive time.</strong><a href="https://www.facebook.com/" target="_blank"></p><img src="icon.png"></a>'
+    });
 });
