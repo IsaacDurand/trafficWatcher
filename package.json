@@ -1,0 +1,15 @@
+{
+  "name": "trafficwatcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "trafficWatcher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "jquery": "^2.2.0"
+  }
+}

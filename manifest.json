@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Traffic Watcher",
+  "description": "Tells you when to leave for an appointment",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "trafficWatcher.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://*.googleapis.com/",
+    "geolocation",
+    "notifications",
+    "storage"
+  ],
+  "background": {
+       "scripts": ["jquery-2.2.0.js","moment.js", "trafficWatcher.js"],
+       "persistent": true,
+       "matches": ["http://*/*", "https://*/*"," https://ajax.googleapis.com/"]
+   },
+   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+}
